@@ -53,7 +53,7 @@ class Tree(Generic[NodeT]):
 
     @staticmethod
     def from_root(root: NodeT) -> "Tree[NodeT]":
-        return Tree(Map({root: tuple()}),
+        return Tree(Map({root: ()}),
                     Map({root: None}))
 
     @property
@@ -75,7 +75,7 @@ class Tree(Generic[NodeT]):
 
         if self.is_root(node):
             # => root
-            return tuple()
+            return ()
 
         parent = self._child_to_parent[node]
         assert parent is not None
@@ -143,7 +143,7 @@ class Tree(Generic[NodeT]):
 
         return Tree((self._parent_to_children
                      .set(parent, siblings + (node,))
-                     .set(node, tuple())),
+                     .set(node, ())),
                     self._child_to_parent.set(node, parent))
 
     def replace_node(self, node: NodeT, new_id: NodeT) -> "Tree[NodeT]":
