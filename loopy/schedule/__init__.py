@@ -28,7 +28,7 @@ from dataclasses import dataclass, replace
 from typing import (FrozenSet, Hashable, Sequence, AbstractSet, Any, Set, TypeVar,
                     Mapping, Dict, Tuple, Iterator, Optional, TYPE_CHECKING)
 
-from immutables import Map
+from constantdict import constantdict as Map
 from pytools import ImmutableRecord
 import islpy as isl
 from loopy.diagnostic import LoopyError, ScheduleDebugInputError, warn_with_kernel

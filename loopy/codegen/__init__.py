@@ -21,7 +21,7 @@ THE SOFTWARE.
 """
 
 import sys
-from immutables import Map
+from constantdict import constantdict as Map
 from typing import (Set, Mapping, Sequence, Any, FrozenSet, Union,
        Optional, Tuple, TYPE_CHECKING)
 from dataclasses import dataclass, replace

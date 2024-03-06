@@ -22,7 +22,7 @@ THE SOFTWARE.
 
 from functools import cached_property
 
-from immutables import Map
+from constantdict import constantdict as Map
 
 from loopy.diagnostic import LoopyError
 import loopy as lp

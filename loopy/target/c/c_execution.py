@@ -26,7 +26,7 @@ import os
 import ctypes
 from dataclasses import dataclass
 
-from immutables import Map
+from constantdict import constantdict as Map
 from pytools import memoize_method
 from pytools.codegen import Indentation, CodeGenerator
 from pytools.prefork import ExecError

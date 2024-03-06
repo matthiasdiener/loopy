@@ -23,7 +23,7 @@ THE SOFTWARE.
 
 import islpy as isl
 from islpy import dim_type
-from immutables import Map
+from constantdict import constantdict as Map
 
 from loopy.diagnostic import LoopyError
 from pymbolic import var

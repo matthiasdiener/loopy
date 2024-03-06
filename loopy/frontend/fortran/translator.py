@@ -23,7 +23,7 @@ THE SOFTWARE.
 import re
 
 from sys import intern
-from immutables import Map
+from constantdict import constantdict as Map
 
 import loopy as lp
 import numpy as np

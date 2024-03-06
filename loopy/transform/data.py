@@ -27,7 +27,7 @@ from dataclasses import dataclass, replace
 from typing import Optional, Tuple, Dict, cast
 
 import numpy as np
-from immutables import Map
+from constantdict import constantdict as Map
 from islpy import dim_type
 
 from pytools import MovedFunctionDeprecationWrapper

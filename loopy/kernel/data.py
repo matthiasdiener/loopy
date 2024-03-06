@@ -31,7 +31,7 @@ from dataclasses import dataclass, replace
 from enum import IntEnum
 from warnings import warn
 
-from immutables import Map
+from constantdict import constantdict as Map
 import numpy as np  # noqa
 from pytools import ImmutableRecord
 from pytools.tag import Taggable

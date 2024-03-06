@@ -41,7 +41,7 @@ from loopy.library.reduction import ReductionOpFunction
 from loopy.kernel import LoopKernel
 from loopy.target import TargetBase
 from pymbolic.primitives import Call
-from immutables import Map
+from constantdict import constantdict as Map
 
 if TYPE_CHECKING:
     from loopy.target.execution import ExecutorBase

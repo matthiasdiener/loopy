@@ -25,7 +25,7 @@ from typing import Sequence, Tuple, Union, Callable, Any, Optional, TYPE_CHECKIN
 from dataclasses import dataclass
 
 import numpy as np
-from immutables import Map
+from constantdict import constantdict as Map
 
 from pytools import memoize_method
 from pytools.codegen import Indentation, CodeGenerator

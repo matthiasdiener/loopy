@@ -24,7 +24,7 @@ from typing import Tuple, TypeVar, Iterable, Optional, List, FrozenSet, cast
 import logging
 logger = logging.getLogger(__name__)
 
-from immutables import Map
+from constantdict import constantdict as Map
 import numpy as np
 
 from loopy.diagnostic import (
@@ -582,7 +582,7 @@ class ArgDescrInferenceMapper(RuleAwareIdentityMapper):
     def __call__(self, expr, kernel, insn, assignees=None):
         from loopy.kernel.data import InstructionBase
         from loopy.symbolic import UncachedIdentityMapper, ExpansionState
-        import immutables
+        from constantdict import constantdict
         assert insn is None or isinstance(insn, InstructionBase)
 
         return UncachedIdentityMapper.__call__(self, expr,
@@ -590,7 +590,7 @@ class ArgDescrInferenceMapper(RuleAwareIdentityMapper):
                     kernel=kernel,
                     instruction=insn,
                     stack=(),
-                    arg_context=immutables.Map()), assignees=assignees)
+                    arg_context=constantdict()), assignees=assignees)
 
     def map_kernel(self, kernel):
 

@@ -23,7 +23,7 @@ THE SOFTWARE.
 
 from dataclasses import dataclass
 from typing import FrozenSet, List, Mapping, Optional, Sequence, Type, Union
-from immutables import Map
+from constantdict import constantdict as Map
 import islpy as isl
 from pytools.tag import Tag
 from loopy.kernel import LoopKernel

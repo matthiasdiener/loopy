@@ -39,7 +39,7 @@ from pytools import (memoize_method,
 from pytools.tag import Taggable, Tag
 import islpy as isl
 from islpy import dim_type
-from immutables import Map
+from constantdict import constantdict as Map
 
 from loopy.diagnostic import CannotBranchDomainTree, LoopyError
 from loopy.tools import update_persistent_hash

@@ -54,8 +54,4 @@ nitpick_ignore_regex = [
         ["py:class", r"numpy\.u?int[0-9]+"],
         ["py:class", r"numpy\.float[0-9]+"],
         ["py:class", r"numpy\.complex[0-9]+"],
-
-        # As of 2022-06-22, it doesn't look like there's sphinx documentation
-        # available.
-        ["py:class", r"immutables\.(.+)"],
         ]

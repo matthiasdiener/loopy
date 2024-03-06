@@ -25,7 +25,7 @@ from typing import (Callable, Tuple, Union, Set, FrozenSet, List, Dict,
         Optional, Sequence, Any)
 from dataclasses import dataclass
 
-from immutables import Map
+from constantdict import constantdict as Map
 
 from abc import ABC, abstractmethod
 from loopy.diagnostic import LoopyError

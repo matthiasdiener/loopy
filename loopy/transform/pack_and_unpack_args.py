@@ -20,7 +20,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 """
 
-from immutables import Map
+from constantdict import constantdict as Map
 from loopy.diagnostic import LoopyError
 from loopy.kernel.instruction import CallInstruction
 from loopy.translation_unit import TranslationUnit

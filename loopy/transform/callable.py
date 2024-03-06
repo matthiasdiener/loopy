@@ -21,7 +21,7 @@ THE SOFTWARE.
 """
 
 import islpy as isl
-from immutables import Map
+from constantdict import constantdict as Map
 
 from pytools import UniqueNameGenerator
 

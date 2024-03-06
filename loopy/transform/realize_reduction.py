@@ -36,7 +36,7 @@ from pytools.tag import Tag
 import islpy as isl
 from pymbolic.primitives import Expression
 
-from immutables import Map
+from constantdict import constantdict as Map
 
 from loopy.kernel.data import make_assignment
 from loopy.symbolic import ReductionCallbackMapper
