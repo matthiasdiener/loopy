@@ -806,15 +806,15 @@ class ExecutorBase:
             # FIXME: This is not so nice. This transfers types from the
             # subarrays of sep-tagged arrays to the 'main' array, because
             # type inference fails otherwise.
-            with arg_to_dtype.mutate() as mm:
-                for name, sep_info in self.sep_info.items():
-                    if entry_knl.arg_dict[name].dtype is None:
-                        for sep_name in sep_info.subarray_names.values():
-                            if sep_name in arg_to_dtype:
-                                mm.set(name, arg_to_dtype[sep_name])
-                                del mm[sep_name]
+            mm = dict(arg_to_dtype)
+            for name, sep_info in self.sep_info.items():
+                if entry_knl.arg_dict[name].dtype is None:
+                    for sep_name in sep_info.subarray_names.values():
+                        if sep_name in arg_to_dtype:
+                            mm[name] = arg_to_dtype[sep_name]
+                            del mm[sep_name]
 
-                arg_to_dtype = mm.finish()
+                arg_to_dtype = Map(mm)
 
             from loopy.kernel.tools import add_dtypes
             t_unit = t_unit.with_kernel(add_dtypes(entry_knl, arg_to_dtype))

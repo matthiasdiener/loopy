@@ -864,7 +864,7 @@ def t_unit_to_python(t_unit, var_name="t_unit",
         "import loopy as lp",
         "import numpy as np",
         "from pymbolic.primitives import *",
-        "import constantdict",
+        "from constantdict import constantdict",
         ])
     body_str = "\n".join(knl_python_code_srcs + ["\n", merge_stmt])
 
