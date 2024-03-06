@@ -32,7 +32,7 @@ intersphinx_mapping = {
         "cgen": ("https://documen.tician.de/cgen", None),
         "pymbolic": ("https://documen.tician.de/pymbolic", None),
         "pytools": ("https://documen.tician.de/pytools", None),
-        "pyrsistent": ("https://pyrsistent.readthedocs.io/en/latest/", None),
+        "constantdict": ("https://matthiasdiener.github.io/constantdict", None),
         }
 
 # Some modules need to import things just so that sphinx can resolve symbols in

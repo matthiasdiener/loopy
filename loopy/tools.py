@@ -109,6 +109,12 @@ class LoopyKeyBuilder(KeyBuilderBase):
         getattr(prn, "print_"+key._base_name)(key)
         key_hash.update(prn.get_str().encode("utf8"))
 
+    def update_for_Map(self, key_hash, key):  # noqa
+        if isinstance(key, isl.Map):
+            self.update_for_BasicSet(key_hash, key)
+        else:
+            raise AssertionError()
+
     def update_for_pymbolic_expression(self, key_hash, key):
         if key is None:
             self.update_for_NoneType(key_hash, key)
